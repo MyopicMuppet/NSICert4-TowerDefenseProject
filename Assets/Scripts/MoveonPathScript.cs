@@ -23,7 +23,7 @@ public class MoveonPathScript : MonoBehaviour
     void Start()
     {
         //additional randomised waypoints that I couldn't get working
-        //PathToFollow = GameObject.Find(pathName).GetComponent<EditofPathScript>();
+        PathToFollow = GameObject.Find(pathName).GetComponent<EditofPathScript>();
         last_position = transform.position;
 
         //NavMesh agent tutorial setting up the agent with NavMeshAgent
@@ -42,8 +42,8 @@ public class MoveonPathScript : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, PathToFollow.path_objs[CurrentWayPointID].position, Time.deltaTime * speed);
 
         // Rotate agent to face the waypoint
-        //var rotation = Quaternion.LookRotation(PathToFollow.path_objs[CurrentWayPointID].position - transform.position);
-        //transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * rotationSpeed);
+        var rotation = Quaternion.LookRotation(PathToFollow.path_objs[CurrentWayPointID].position - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * rotationSpeed);
 
         //tutorial example given of how to attach waypoints to the navmesh agent
         agent.SetDestination(PathToFollow.path_objs[CurrentWayPointID].transform.position);
