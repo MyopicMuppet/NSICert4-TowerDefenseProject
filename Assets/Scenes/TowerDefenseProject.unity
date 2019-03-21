@@ -3092,7 +3092,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e269728365dc6143a13e2f1941a02b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PathToFollow: {fileID: 1592400951}
+  PathToFollow: {fileID: 950105610}
+  pathToFollowList:
+  - {fileID: 1592400951}
+  - {fileID: 950105610}
   NPC: {fileID: 120442748}
   agent: {fileID: 120442754}
   CurrentWayPointID: 0
@@ -24996,7 +24999,7 @@ GameObject:
   - component: {fileID: 950105611}
   - component: {fileID: 950105610}
   m_Layer: 0
-  m_Name: waypoint (1)
+  m_Name: waypoint (0)
   m_TagString: WPH
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
