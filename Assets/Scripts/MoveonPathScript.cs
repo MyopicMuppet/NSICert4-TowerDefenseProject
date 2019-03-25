@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveonPathScript : MonoBehaviour
 {
-
+    #region Variables
     public EditofPathScript PathToFollow;
     public EditofPathScript[] pathToFollowList;
 
@@ -19,21 +19,23 @@ public class MoveonPathScript : MonoBehaviour
     private EditofPathScript path;
     Vector3 last_position;
     Vector3 current_position;
-
+    #endregion
+    #region Start
     // Use this for initialization
     void Start()
     {
 
          path = pathToFollowList[Random.Range(0, pathToFollowList.Length)];
         //additional randomised waypoints that I couldn't get working
-        PathToFollow = GameObject.Find(pathName).GetComponent<EditofPathScript>();
+        //PathToFollow = GameObject.Find(pathName).GetComponent<EditofPathScript>();
         last_position = transform.position;
 
         //NavMesh agent tutorial setting up the agent with NavMeshAgent
         agent = NPC.GetComponent<UnityEngine.AI.NavMeshAgent>();
 
     }
-
+    #endregion
+    #region Update
     // Update is called once per frame
     void Update()
     {
@@ -67,6 +69,6 @@ public class MoveonPathScript : MonoBehaviour
         }
 
     }
-
+    #endregion
 
 }
