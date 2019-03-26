@@ -41019,7 +41019,7 @@ MonoBehaviour:
   attachedCamera: {fileID: 1911752001}
   movementThreshold: 0.25
   movementSpeed: 20
-  zoomSensitivity: 10
+  zoomSensitivity: 100
   size: {x: 18, y: 1, z: 18}
 --- !u!4 &1530912965
 Transform:
