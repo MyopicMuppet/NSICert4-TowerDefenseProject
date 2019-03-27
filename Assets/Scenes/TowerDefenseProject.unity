@@ -45115,6 +45115,77 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAvailable: 1
   pivotPoint: {fileID: 0}
+--- !u!1001 &1588623617
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4809102628976430, guid: 6f823681bf371d44d9cef5b48ef99d90, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809102628976430, guid: 6f823681bf371d44d9cef5b48ef99d90, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809102628976430, guid: 6f823681bf371d44d9cef5b48ef99d90, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809102628976430, guid: 6f823681bf371d44d9cef5b48ef99d90, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809102628976430, guid: 6f823681bf371d44d9cef5b48ef99d90, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809102628976430, guid: 6f823681bf371d44d9cef5b48ef99d90, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809102628976430, guid: 6f823681bf371d44d9cef5b48ef99d90, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809102628976430, guid: 6f823681bf371d44d9cef5b48ef99d90, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552595721832094, guid: 6f823681bf371d44d9cef5b48ef99d90, type: 2}
+      propertyPath: m_Name
+      value: HologramCannon
+      objectReference: {fileID: 0}
+    - target: {fileID: 23158997212863500, guid: 6f823681bf371d44d9cef5b48ef99d90,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a767dc673ac97de42830436627c4eb9a, type: 2}
+    - target: {fileID: 23551317340246824, guid: 6f823681bf371d44d9cef5b48ef99d90,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a767dc673ac97de42830436627c4eb9a, type: 2}
+    - target: {fileID: 23115526037966126, guid: 6f823681bf371d44d9cef5b48ef99d90,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a767dc673ac97de42830436627c4eb9a, type: 2}
+    - target: {fileID: 23861480535027254, guid: 6f823681bf371d44d9cef5b48ef99d90,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a767dc673ac97de42830436627c4eb9a, type: 2}
+    - target: {fileID: 23811638659860916, guid: 6f823681bf371d44d9cef5b48ef99d90,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a767dc673ac97de42830436627c4eb9a, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6f823681bf371d44d9cef5b48ef99d90, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1590831613
 GameObject:
   m_ObjectHideFlags: 0
@@ -50096,6 +50167,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1755213282}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1759854206 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1552595721832094, guid: 6f823681bf371d44d9cef5b48ef99d90,
+    type: 2}
+  m_PrefabInternal: {fileID: 1588623617}
 --- !u!1 &1764219636
 GameObject:
   m_ObjectHideFlags: 0
@@ -54757,7 +54833,7 @@ GameObject:
   - component: {fileID: 1911752004}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54834,10 +54910,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towers:
-  - {fileID: 1478496292818680, guid: 6f823681bf371d44d9cef5b48ef99d90, type: 2}
-  - {fileID: 1098993882768274, guid: 6eba2b9509f1c2e47ab54fe0ebe6063e, type: 2}
-  - {fileID: 1793387312222762, guid: 46f2347445d3a384fba7169845fcdb6f, type: 2}
-  holograms: []
+  - {fileID: 1552595721832094, guid: 6f823681bf371d44d9cef5b48ef99d90, type: 2}
+  holograms:
+  - {fileID: 1759854206}
   rayDistance: 1000
   hitLayers:
     serializedVersion: 2
