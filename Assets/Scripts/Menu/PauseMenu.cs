@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour {
     #region Variables
     public static bool GameIsPaused = false;
 
+    public GameObject buttonsUI;
     public GameObject pauseMenuUI;
     #endregion
     #region Pause Menu
@@ -31,6 +32,7 @@ public class PauseMenu : MonoBehaviour {
     {
         //disable the pause menu
         pauseMenuUI.SetActive(false);
+        buttonsUI.SetActive(true);
         //Resume time
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -40,6 +42,7 @@ public class PauseMenu : MonoBehaviour {
     {
         //Activate the pause menu
         pauseMenuUI.SetActive(true);
+        buttonsUI.SetActive(false);
         //freeze time
         Time.timeScale = 0f;
         GameIsPaused = true;
@@ -50,6 +53,7 @@ public class PauseMenu : MonoBehaviour {
         //Load menu scene and resume time
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
+        
     }
 
     public void ExitGame() 
