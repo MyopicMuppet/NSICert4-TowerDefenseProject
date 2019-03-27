@@ -92,4 +92,22 @@ public class Selector : MonoBehaviour
             currentIndex = index;
         }
     }
+
+    public void archerTowerButton()
+    {
+        currentIndex = 0;
+    }
+
+    public void ballistaTowerButton()
+    {
+        currentIndex = 1;
+    }
+
+    public void mageTowerButton()
+    {
+        currentIndex = 2;
+    }
+
 }
+
+
