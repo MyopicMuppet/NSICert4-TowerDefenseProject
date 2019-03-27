@@ -92,7 +92,8 @@ public class Selector : MonoBehaviour
             currentIndex = index;
         }
     }
-
+    #region TowerButtons
+    //Set the index to the selected tower
     public void archerTowerButton()
     {
         currentIndex = 0;
@@ -107,7 +108,7 @@ public class Selector : MonoBehaviour
     {
         currentIndex = 2;
     }
-
+    #endregion
 }
 
 
