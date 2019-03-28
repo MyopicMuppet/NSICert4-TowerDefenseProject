@@ -63,10 +63,10 @@ public class MoveonPathScript : MonoBehaviour
 
 
         // Loop waypoints once the end is reached
-        if (CurrentWayPointID >= path.path_objs.Count)
+        /*if (CurrentWayPointID >= path.path_objs.Count)
         {
             CurrentWayPointID = 0;
-        }
+        }*/
 
     }
     #endregion
