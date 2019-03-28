@@ -109,6 +109,10 @@ MonoBehaviour:
   speed: 1.5
   rotationSpeed: 5
   pathName: 
+  damage: 10
+  attackRate: 1
+  attackRange: 1
+  currentGate: {fileID: 0}
 --- !u!114 &114446306341728236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -142,11 +146,11 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1128827759135354}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
-  m_Direction: 1
+  m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &195450121455221922
 NavMeshAgent:

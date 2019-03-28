@@ -11,11 +11,12 @@ public class GetPath : MonoBehaviour
     void Start()
     {
 
-        // Create a random number of the waypoints
-        int num = 1; //Random.Range(0, allPaths.Length);
+        //Create a random number of the waypoints
+        /*int num = 1;
+        Random.Range(0, allPaths.Length);
         transform.position = allPaths[num].transform.position;
         MoveonPathScript yourPath = GetComponent<MoveonPathScript>();
-        yourPath.pathName = allPaths[num].name;
+        yourPath.pathName = allPaths[num].name;*/
         
     }
 
