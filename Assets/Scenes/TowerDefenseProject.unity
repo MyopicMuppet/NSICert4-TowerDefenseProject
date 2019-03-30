@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44746828, g: 0.49741912, b: 0.57529306, a: 1}
+  m_IndirectSpecularColor: {r: 0.44746858, g: 0.49741977, b: 0.5752942, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -40892,6 +40892,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 824588573}
+  - component: {fileID: 824588574}
   m_Layer: 0
   m_Name: NorthEnemySpawner
   m_TagString: Untagged
@@ -40915,6 +40916,21 @@ Transform:
   m_Father: {fileID: 263541513}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &824588574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 824588572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d1b032644b2fd4c9d3aca985d92748, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knightPrefab: {fileID: 4140775842168488, guid: 587a4616b84a4a744a73d8dc6de8f6ec,
+    type: 2}
+  spawnPoint: {fileID: 2042917814}
+  timeBetweenWaves: 3
 --- !u!1 &824689925
 GameObject:
   m_ObjectHideFlags: 0
@@ -55966,7 +55982,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1139142845
 Transform:
   m_ObjectHideFlags: 0
