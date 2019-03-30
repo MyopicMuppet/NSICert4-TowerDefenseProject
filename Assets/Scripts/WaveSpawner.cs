@@ -2,28 +2,26 @@
 using System.Collections;
 public class WaveSpawner : MonoBehaviour
 {
-
     public Transform knightPrefab;
-
     public Transform spawnPoint;
-
     public float timeBetweenWaves = 3f;
-    private float countdown = 2f;
 
+    private float countdown = 2f;
     private int waveIndex = 0;
+
     private void Update()
     {
-         if (countdown <= 0f)
+        if (countdown <= 0f)
         {
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
         }
 
         countdown -= Time.deltaTime;
-
-
     }
-    IEnumerator SpawnWave ()
+
+
+    private IEnumerator SpawnWave()
     {
         for (int i = 0; i < waveIndex; i++)
         {
@@ -33,7 +31,8 @@ public class WaveSpawner : MonoBehaviour
         waveIndex++;
         //Debug.Log("Wave Incoming!");
     }
-    void SpawnKnight()
+
+    private void SpawnKnight()
     {
         Instantiate(knightPrefab, spawnPoint.position, spawnPoint.rotation);
     }

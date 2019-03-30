@@ -8,98 +8,77 @@ public class MoveonPathScript : MonoBehaviour
     //waypoint variables
     public EditofPathScript PathToFollow;
     public EditofPathScript[] pathToFollowList;
-    public GameObject NPC;
-    public UnityEngine.AI.NavMeshAgent agent;
+    public NavMeshAgent agent;
     public int CurrentWayPointID = 0;
     public float speed;
-    private float reachDistance = 1.0f;
     public float rotationSpeed = 5.0f;
     public string pathName;
-    private EditofPathScript path;
-    Vector3 last_position;
-    Vector3 current_position;
-
+    
     //Enemy attack and damage variables
     public int damage = 10;
     public float attackRate = 5f;
     public float attackRange = 5f;
-
     public GateHealth currentGate;
+
+    private EditofPathScript path;
+    private Vector3 last_position;
+    private Vector3 current_position;
+    private float reachDistance = 1.0f;
     private float attackTimer = 0f;
     #endregion
+       
+    // Note (Manny): You don't need a region for every function, i.e, 'Start' doesn't need a '#region Start'
+    #region Unity Events
     void OnDrawGizmosSelected()
     {
         // Draw the attack sphere around Tower
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
-    #region Start
     // Use this for initialization
     void Start()
     {
-
-         path = pathToFollowList[Random.Range(0, pathToFollowList.Length)];
+        path = pathToFollowList[Random.Range(0, pathToFollowList.Length)];
         //additional randomised waypoints that I couldn't get working
         //PathToFollow = GameObject.Find(pathName).GetComponent<EditofPathScript>();
         last_position = transform.position;
-
         //NavMesh agent tutorial setting up the agent with NavMeshAgent
-        agent = NPC.GetComponent<UnityEngine.AI.NavMeshAgent>();
-
+        agent = GetComponent<NavMeshAgent>(); // Note (Manny): "NPC.GetComponent" will only get it from the prefab! Not the Instance!
     }
-    #endregion
-    #region Update
     // Update is called once per frame
     void Update()
     {
-
-
+        // Note (Manny): Cache these variables or else your project will get much much slower!
+        // Also, it's easier to read!
+        List<Transform> currentPath = path.path_objs;
+        Transform waypoint = currentPath[CurrentWayPointID];
         // Find waypoint ID
-        float distance = Vector3.Distance(path.path_objs[CurrentWayPointID].position, transform.position);
+        float distance = Vector3.Distance(waypoint.position, transform.position);
         // Move to waypoint at speed
-        transform.position = Vector3.MoveTowards(transform.position, path.path_objs[CurrentWayPointID].position, Time.deltaTime * speed);
+        transform.position = Vector3.MoveTowards(transform.position, waypoint.position, Time.deltaTime * speed);
         //return path following
-
         // Rotate agent to face the waypoint
-        var rotation = Quaternion.LookRotation(path.path_objs[CurrentWayPointID].position - transform.position);
+        var rotation = Quaternion.LookRotation(waypoint.position - transform.position);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * rotationSpeed);
-
         //tutorial example given of how to attach waypoints to the navmesh agent
-        agent.SetDestination(path.path_objs[CurrentWayPointID].transform.position);
+        agent.SetDestination(waypoint.position);
         // send agent to next waypoint
-
         if (distance <= reachDistance)
         {
             CurrentWayPointID++;
         }
-       
-
-
         // Loop waypoints once the end is reached
-       if (CurrentWayPointID >= path.path_objs.Count)
+        if (CurrentWayPointID >= currentPath.Count)
         {
-            
+            CurrentWayPointID = currentPath.Count - 1;
+
+            print("SMASHING GATES...");
             SmashGates();
-            CurrentWayPointID = path.path_objs.Count -1;
         }
-
     }
-
- 
     #endregion
 
-    // Aims at a given enemy every frame
-    public virtual void Aim(GateHealth g)
-    {
-        print("I am aiming at '" + g.name + "'");
-    }
-    // Attacks at a given enemy only when 'attacking'
-    public virtual void Attack(GateHealth g)
-    {
-        print("I am attacking '" + g.name + "'");
-
-    }
-
+    #region Internal
     void DetectGates()
     {
         // Reset current enemy
@@ -118,7 +97,22 @@ public class MoveonPathScript : MonoBehaviour
             }
         }
     }
+    #endregion
 
+    #region External
+    // Aims at a given enemy every frame
+    public virtual void Aim(GateHealth g)
+    {
+        print("I am aiming at '" + g.name + "'");
+    }
+    // Attacks at a given enemy only when 'attacking'
+    public virtual void Attack(GateHealth g)
+    {
+        print("I am attacking '" + g.name + "'");
+        g.TakeDamage(damage);
+
+        // Note (Manny): The way you're using Inheritance & Polymorphism here is wrong. Come and see me for more details.
+    }
     // Protected - Accessible to Cannon / Other Tower classes
     // Virtual - Able to change what this function does in derived classes
     public void SmashGates()
@@ -126,7 +120,7 @@ public class MoveonPathScript : MonoBehaviour
         // Detect enemies before performing attack logic
         DetectGates();
         // Count up the timer
-        attackTimer += Time.deltaTime;
+        attackTimer += Time.deltaTime; // Note (Manny): This script needs to run every frame or else this doesn't make sense.
         // if there's an enemy
         if (currentGate)
         {
@@ -134,7 +128,7 @@ public class MoveonPathScript : MonoBehaviour
             Aim(currentGate);
             // Is attack timer ready?
             if (attackTimer >= attackRate)
-                
+
             {
                 // Attack the enemy!
                 Attack(currentGate);
@@ -143,5 +137,5 @@ public class MoveonPathScript : MonoBehaviour
             }
         }
     }
-
+    #endregion
 }

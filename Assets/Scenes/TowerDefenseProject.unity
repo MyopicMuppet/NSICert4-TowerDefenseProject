@@ -21244,7 +21244,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f61f224564f47e849a166f9d05bc8712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
+  maxHealth: 100
+  health: 0
 --- !u!1001 &429900272
 Prefab:
   m_ObjectHideFlags: 0
@@ -22436,7 +22437,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f61f224564f47e849a166f9d05bc8712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
+  maxHealth: 100
+  health: 0
 --- !u!1 &452168366
 GameObject:
   m_ObjectHideFlags: 0
@@ -40892,7 +40894,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 824588573}
-  - component: {fileID: 824588574}
   m_Layer: 0
   m_Name: NorthEnemySpawner
   m_TagString: Untagged
@@ -40916,21 +40917,6 @@ Transform:
   m_Father: {fileID: 263541513}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &824588574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 824588572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31d1b032644b2fd4c9d3aca985d92748, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  knightPrefab: {fileID: 4140775842168488, guid: 587a4616b84a4a744a73d8dc6de8f6ec,
-    type: 2}
-  spawnPoint: {fileID: 2042917814}
-  timeBetweenWaves: 3
 --- !u!1 &824689925
 GameObject:
   m_ObjectHideFlags: 0
@@ -54132,7 +54118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f61f224564f47e849a166f9d05bc8712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
+  maxHealth: 100
+  health: 0
 --- !u!1 &1109371800
 GameObject:
   m_ObjectHideFlags: 0
@@ -77931,7 +77918,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f61f224564f47e849a166f9d05bc8712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
+  maxHealth: 100
+  health: 0
 --- !u!4 &1544847810 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4677432953985854, guid: c7c5ddbcc27e6b548aa38e66c49591dd,
