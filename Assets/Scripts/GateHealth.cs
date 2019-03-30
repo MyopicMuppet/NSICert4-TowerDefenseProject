@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GateHealth : MonoBehaviour
 {
-    public int maxHealth = 1000;
-    private int health = 0;
+    public int maxHealth = 100;
+    public int health = 0; // Note (Manny): You weren't displaying health.
     // Use this for initialization
     void Start ()
     {

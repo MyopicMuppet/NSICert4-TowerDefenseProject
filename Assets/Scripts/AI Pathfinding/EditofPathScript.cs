@@ -12,7 +12,8 @@ public class EditofPathScript : MonoBehaviour
     Transform[] theArray;
 
     //draw Gizmos in the editor
-    void OnDrawGizmos()
+    // Note (Manny): Use OnDrawGizmosSelected, it was harder to debug with all the lines everywhere.
+    void OnDrawGizmosSelected()
     {
         Gizmos.color = rayColor;
         //Looking at children of main waypoint
