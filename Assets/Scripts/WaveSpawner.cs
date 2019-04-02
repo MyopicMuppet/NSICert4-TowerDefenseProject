@@ -3,8 +3,8 @@ using System.Collections;
 public class WaveSpawner : MonoBehaviour
 {
     [Header("Prefabs")]
-    public GameObject knightPrefab;
     public GameObject bossPrefab;
+    public GameObject knightPrefab;
     public GameObject tankKnightPrefab;
 
     [Header("Spawn Point")]
@@ -12,10 +12,10 @@ public class WaveSpawner : MonoBehaviour
 
     [Header("Path to Follow")]
     public Transform[] waypoints;
-    private int currentIndex = 1;
-    private float stoppingDistance = 1f;
+    //private int currentIndex = 1;
+    /// private float stoppingDistance = 1f;
     [Header("Timing")]
-    public float timeBetweenWaves = 3f;
+    public float timeBetweenWaves = 5f;
 
     private float countdown = 2f;
     private int waveIndex = 0;
@@ -38,7 +38,7 @@ public class WaveSpawner : MonoBehaviour
         for (int i = 0; i < waveIndex; i++)
         {
             SpawnEnemies();
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(10f);
         }
         waveIndex++;
         //Debug.Log("Wave Incoming!");
@@ -56,7 +56,7 @@ public class WaveSpawner : MonoBehaviour
         SpawnEnemy(tankKnightPrefab);
     }
 
-    void MoveOnWaypoints()
+    /*void MoveOnWaypoints()
     {
         Transform point = waypoints[currentIndex];
 
@@ -69,7 +69,7 @@ public class WaveSpawner : MonoBehaviour
             {
                 currentIndex = 1;
             }
-        }
-    }
+        } 
+    }*/
 
 }
