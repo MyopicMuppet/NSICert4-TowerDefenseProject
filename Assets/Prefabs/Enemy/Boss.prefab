@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75ca563eed6d6574f9aba098d60cf66c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
+  maxHealth: 100
 --- !u!114 &114962955697018974
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,10 +131,10 @@ MonoBehaviour:
   - {fileID: 0}
   agent: {fileID: 195147600713290266}
   CurrentWayPointID: 0
-  speed: 1
+  speed: 0.05
   rotationSpeed: 5
   pathName: 
-  damage: 10
+  damage: 15
   attackRate: 1
   attackRange: 1
   currentGate: {fileID: 0}

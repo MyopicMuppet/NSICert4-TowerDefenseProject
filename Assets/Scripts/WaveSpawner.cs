@@ -12,7 +12,7 @@ public class WaveSpawner : MonoBehaviour
 
     [Header("Path to Follow")]
     public Transform[] waypoints;
-    //private int currentIndex = 1;
+    // private int currentIndex = 1;
     /// private float stoppingDistance = 1f;
     [Header("Timing")]
     public float timeBetweenWaves = 5f;
