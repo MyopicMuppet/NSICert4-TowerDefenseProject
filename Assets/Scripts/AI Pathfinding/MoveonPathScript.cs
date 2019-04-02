@@ -13,7 +13,7 @@ public class MoveonPathScript : MonoBehaviour
     public float speed;
     public float rotationSpeed = 5.0f;
     public string pathName;
-    
+
     //Enemy attack and damage variables
     public int damage = 10;
     public float attackRate = 5f;
@@ -26,7 +26,7 @@ public class MoveonPathScript : MonoBehaviour
     private float reachDistance = 1.0f;
     private float attackTimer = 0f;
     #endregion
-       
+
     // Note (Manny): You don't need a region for every function, i.e, 'Start' doesn't need a '#region Start'
     #region Unity Events
     void OnDrawGizmosSelected()
@@ -72,7 +72,6 @@ public class MoveonPathScript : MonoBehaviour
         {
             CurrentWayPointID = currentPath.Count - 1;
 
-            print("SMASHING GATES...");
             SmashGates();
         }
     }

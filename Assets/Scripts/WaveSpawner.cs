@@ -2,8 +2,19 @@
 using System.Collections;
 public class WaveSpawner : MonoBehaviour
 {
-    public Transform knightPrefab;
+    [Header("Prefabs")]
+    public GameObject knightPrefab;
+    public GameObject bossPrefab;
+    public GameObject tankKnightPrefab;
+
+    [Header("Spawn Point")]
     public Transform spawnPoint;
+
+    [Header("Path to Follow")]
+    public Transform[] waypoints;
+    private int currentIndex = 1;
+    private float stoppingDistance = 1f;
+    [Header("Timing")]
     public float timeBetweenWaves = 3f;
 
     private float countdown = 2f;
@@ -18,6 +29,7 @@ public class WaveSpawner : MonoBehaviour
         }
 
         countdown -= Time.deltaTime;
+
     }
 
 
@@ -25,16 +37,39 @@ public class WaveSpawner : MonoBehaviour
     {
         for (int i = 0; i < waveIndex; i++)
         {
-            SpawnKnight();
+            SpawnEnemies();
             yield return new WaitForSeconds(0.5f);
         }
         waveIndex++;
         //Debug.Log("Wave Incoming!");
     }
 
-    private void SpawnKnight()
+    void SpawnEnemy(GameObject prefab)
     {
-        Instantiate(knightPrefab, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(prefab, spawnPoint.position, spawnPoint.rotation);
+    }
+
+    private void SpawnEnemies()
+    {
+        SpawnEnemy(knightPrefab);
+        SpawnEnemy(bossPrefab);
+        SpawnEnemy(tankKnightPrefab);
+    }
+
+    void MoveOnWaypoints()
+    {
+        Transform point = waypoints[currentIndex];
+
+        float distance = Vector3.Distance(transform.position, point.position);
+
+        if (distance < stoppingDistance)
+        {
+            currentIndex++;
+            if (currentIndex >= waypoints.Length)
+            {
+                currentIndex = 1;
+            }
+        }
     }
 
 }
