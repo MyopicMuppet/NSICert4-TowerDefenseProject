@@ -19,12 +19,14 @@ public class MoveonPathScript : MonoBehaviour
     public float attackRate = 5f;
     public float attackRange = 5f;
     public GateHealth currentGate;
+    public CastleHealth currentCastle;
 
     private EditofPathScript path;
     private Vector3 last_position;
     private Vector3 current_position;
     private float reachDistance = 1.0f;
     private float attackTimer = 0f;
+    private Transform myTransform;
     #endregion
 
     // Note (Manny): You don't need a region for every function, i.e, 'Start' doesn't need a '#region Start'
@@ -35,6 +37,12 @@ public class MoveonPathScript : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
+
+    private void Awake()
+    {
+        myTransform = transform;
+    }
+
     // Use this for initialization
     void Start()
     {
@@ -69,12 +77,17 @@ public class MoveonPathScript : MonoBehaviour
         {
             CurrentWayPointID++;
         }
-        // Loop waypoints once the end is reached
+        // End movement on waypoint and attack gates
         if (CurrentWayPointID >= currentPath.Count)
         {
             CurrentWayPointID = currentPath.Count - 1;
 
             SmashGates();
+        }
+
+        if (currentGate = null)
+        {
+            DestroyCastle();
         }
     }
     #endregion
@@ -114,6 +127,17 @@ public class MoveonPathScript : MonoBehaviour
 
         // Note (Manny): The way you're using Inheritance & Polymorphism here is wrong. Come and see me for more details.
     }
+
+    public virtual void AimC(CastleHealth c)
+    {
+        print("I am aiming at '" + c.name + "'");
+    }
+
+    public virtual void AttackC(CastleHealth c)
+    {
+        print("I am attacking  '" + c.name + "'");
+        c.TakeDamage(damage);
+    }
     // Protected - Accessible to Cannon / Other Tower classes
     // Virtual - Able to change what this function does in derived classes
     public void SmashGates()
@@ -138,5 +162,41 @@ public class MoveonPathScript : MonoBehaviour
             }
         }
     }
-    #endregion
+
+    public void DetectCastle()
+    {
+        // Reset current enemy
+        currentCastle = null;
+        // Perform OverlapSphere and get the hits
+        Collider[] hits = Physics.OverlapSphere(transform.position, attackRange);
+        // Loop through everything we hit
+        foreach (var hit in hits)
+        {
+            // If the thing we hit is an enemy
+            CastleHealth castle = hit.GetComponent<CastleHealth>();
+            if (castle)
+            {
+                // Set current enemy to that one
+                currentCastle = castle;
+            }
+        }
+    }
+
+    public void DestroyCastle()
+    {
+
+        DetectCastle();
+        attackTimer += Time.deltaTime;
+        AimC(currentCastle);
+        // Is attack timer ready?
+        if (attackTimer >= attackRate)
+
+        {
+            // Attack the enemy!
+            Attack(currentGate);
+            // Reset timer
+            attackTimer = 0f;
+        }
+        #endregion
+    }
 }
