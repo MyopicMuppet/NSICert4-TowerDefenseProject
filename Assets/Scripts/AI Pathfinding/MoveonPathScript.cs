@@ -39,10 +39,7 @@ public class MoveonPathScript : MonoBehaviour
     void Start()
     {
         CurrentWayPointID = 0;
-<<<<<<< HEAD
-=======
 
->>>>>>> b25619d4dd33c96aa74cdd86ecbb19ff196a81f4
         path = pathToFollowList[Random.Range(0, pathToFollowList.Length)];
         //additional randomised waypoints that I couldn't get working
         //PathToFollow = GameObject.Find(pathName).GetComponent<EditofPathScript>();
