@@ -105,11 +105,11 @@ MonoBehaviour:
   - {fileID: 0}
   agent: {fileID: 195450121455221922}
   CurrentWayPointID: 0
-  speed: 1.5
+  speed: 0.105
   rotationSpeed: 5
   pathName: 
-  damage: 10
-  attackRate: 1
+  damage: 6
+  attackRate: 0.75
   attackRange: 1
   currentGate: {fileID: 0}
 --- !u!114 &114446306341728236
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75ca563eed6d6574f9aba098d60cf66c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
+  maxHealth: 30
 --- !u!136 &136087801914636090
 CapsuleCollider:
   m_ObjectHideFlags: 1

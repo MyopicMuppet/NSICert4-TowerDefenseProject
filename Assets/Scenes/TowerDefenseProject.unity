@@ -21077,7 +21077,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 1592400952}
   - {fileID: 950105611}
-  timeBetweenWaves: 5
+  timeBetweenWaves: 6
 --- !u!1 &429422673
 GameObject:
   m_ObjectHideFlags: 0
@@ -21175,7 +21175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f61f224564f47e849a166f9d05bc8712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 200
   health: 0
 --- !u!1001 &429900272
 Prefab:
@@ -22418,7 +22418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f61f224564f47e849a166f9d05bc8712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 200
   health: 0
 --- !u!1 &452168366
 GameObject:
@@ -54150,7 +54150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f61f224564f47e849a166f9d05bc8712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 200
   health: 0
 --- !u!1 &1109371800
 GameObject:
@@ -78155,7 +78155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f61f224564f47e849a166f9d05bc8712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 200
   health: 0
 --- !u!4 &1544847810 stripped
 Transform:
