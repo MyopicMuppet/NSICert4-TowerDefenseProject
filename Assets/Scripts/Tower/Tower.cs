@@ -9,7 +9,6 @@ public class Tower : MonoBehaviour
     public float attackRange = 2f;
 
     protected Enemy currentEnemy;
-
     private float attackTimer = 0f;
 
     void OnDrawGizmosSelected()
