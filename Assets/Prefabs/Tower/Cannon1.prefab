@@ -584,7 +584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 30
   attackRate: 2
-  attackRange: 2
+  attackRange: 3
 --- !u!120 &120351661084088956
 LineRenderer:
   m_ObjectHideFlags: 1
