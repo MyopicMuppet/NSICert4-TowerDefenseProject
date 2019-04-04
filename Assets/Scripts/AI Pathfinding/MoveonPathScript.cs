@@ -85,10 +85,10 @@ public class MoveonPathScript : MonoBehaviour
             SmashGates();
         }
 
-        if (currentGate = null)
+        /*if (currentGate = null)
         {
             DestroyCastle();
-        }
+        }*/
     }
     #endregion
 
@@ -128,7 +128,7 @@ public class MoveonPathScript : MonoBehaviour
         // Note (Manny): The way you're using Inheritance & Polymorphism here is wrong. Come and see me for more details.
     }
 
-    public virtual void AimC(CastleHealth c)
+    /*public virtual void AimC(CastleHealth c)
     {
         print("I am aiming at '" + c.name + "'");
     }
@@ -137,7 +137,7 @@ public class MoveonPathScript : MonoBehaviour
     {
         print("I am attacking  '" + c.name + "'");
         c.TakeDamage(damage);
-    }
+    }*/
     // Protected - Accessible to Cannon / Other Tower classes
     // Virtual - Able to change what this function does in derived classes
     public void SmashGates()
@@ -163,7 +163,7 @@ public class MoveonPathScript : MonoBehaviour
         }
     }
 
-    public void DetectCastle()
+    /*public void DetectCastle()
     {
         // Reset current enemy
         currentCastle = null;
@@ -196,7 +196,6 @@ public class MoveonPathScript : MonoBehaviour
             Attack(currentGate);
             // Reset timer
             attackTimer = 0f;
-        }
-        #endregion
-    }
+        }*/
+    #endregion
 }
