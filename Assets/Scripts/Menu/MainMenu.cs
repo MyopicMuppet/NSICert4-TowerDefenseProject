@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour {
     {
         //Load the next scene when the play button is pressed
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        
     }
 
     public void ExitGame()
