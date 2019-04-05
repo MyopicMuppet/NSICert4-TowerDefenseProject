@@ -13,6 +13,11 @@ public class PauseMenu : MonoBehaviour
     public GameObject gameOverMenuUI;
     #endregion
     #region Pause Menu
+    public void Awake()
+    {
+        buttonsUI.SetActive(true);
+    }
+
     // Update is called once per frame
     void Update()
     {
