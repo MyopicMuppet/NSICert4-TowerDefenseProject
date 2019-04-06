@@ -6,6 +6,7 @@ public class MoveonPathScript : MonoBehaviour
 {
     #region Variables
     //waypoint variables
+    [Header("Pathfinding")]
     public EditofPathScript PathToFollow;
     public EditofPathScript[] pathToFollowList;
     public NavMeshAgent agent;
@@ -15,6 +16,7 @@ public class MoveonPathScript : MonoBehaviour
     public string pathName;
 
     //Enemy attack and damage variables
+    [Header("Attack & Damage")]
     public int damage = 10;
     public float attackRate = 5f;
     public float attackRange = 5f;
