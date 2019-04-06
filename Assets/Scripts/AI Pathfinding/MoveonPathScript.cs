@@ -8,7 +8,7 @@ public class MoveonPathScript : MonoBehaviour
     //waypoint variables
     [Header("Pathfinding")]
     public EditofPathScript PathToFollow;
-    public EditofPathScript[] pathToFollowList;
+    public Transform[] pathToFollowList;
     public NavMeshAgent agent;
     public int CurrentWayPointID = 0;
     public float speed;
@@ -49,8 +49,10 @@ public class MoveonPathScript : MonoBehaviour
     void Start()
     {
         CurrentWayPointID = 0;
+        pathToFollowList = this.GetComponentInParent<WaveSpawner>().waypoints;
+        CurrentWayPointID = Random.Range(0, pathToFollowList.Length);
+        path = pathToFollowList[CurrentWayPointID].GetComponent<EditofPathScript>(); 
 
-        path = pathToFollowList[Random.Range(0, pathToFollowList.Length)];
         //additional randomised waypoints that I couldn't get working
         //PathToFollow = GameObject.Find(pathName).GetComponent<EditofPathScript>();
         last_position = transform.position;

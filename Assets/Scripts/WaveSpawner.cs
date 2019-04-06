@@ -46,7 +46,8 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnEnemy(GameObject prefab)
     {
-        Instantiate(prefab, spawnPoint.position, spawnPoint.rotation);
+        GameObject clone = Instantiate(prefab, spawnPoint.position, spawnPoint.rotation);
+        clone.transform.parent = this.transform;
     }
 
     private void SpawnEnemies()
