@@ -1618,6 +1618,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 1128827759135354, guid: 587a4616b84a4a744a73d8dc6de8f6ec, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 587a4616b84a4a744a73d8dc6de8f6ec, type: 2}
   m_IsPrefabAsset: 0
@@ -3794,11 +3798,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 82847268}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &84181034 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1512763460702574, guid: 3bcc8282df1f2aa48b55331eb04521c7,
-    type: 2}
-  m_PrefabInternal: {fileID: 1816120394}
 --- !u!1 &88747884
 GameObject:
   m_ObjectHideFlags: 0
@@ -13712,6 +13711,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 1128827759135354, guid: 587a4616b84a4a744a73d8dc6de8f6ec, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 587a4616b84a4a744a73d8dc6de8f6ec, type: 2}
   m_IsPrefabAsset: 0
@@ -14027,9 +14030,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d1b032644b2fd4c9d3aca985d92748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossPrefab: {fileID: 84181034}
-  knightPrefab: {fileID: 895179268}
-  tankKnightPrefab: {fileID: 1934461399}
+  bossPrefab: {fileID: 1512763460702574, guid: 3bcc8282df1f2aa48b55331eb04521c7, type: 2}
+  knightPrefab: {fileID: 1128827759135354, guid: 587a4616b84a4a744a73d8dc6de8f6ec,
+    type: 2}
+  tankKnightPrefab: {fileID: 1082899121704622, guid: 59b1d977b41f99743a1bda86edf2619e,
+    type: 2}
   spawnPoint: {fileID: 284484539}
   waypoints:
   - {fileID: 771059176}
@@ -16316,11 +16321,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 346482131}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &349210846 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1128827759135354, guid: 587a4616b84a4a744a73d8dc6de8f6ec,
-    type: 2}
-  m_PrefabInternal: {fileID: 1958362552}
 --- !u!1 &350864333
 GameObject:
   m_ObjectHideFlags: 0
@@ -19945,9 +19945,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d1b032644b2fd4c9d3aca985d92748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossPrefab: {fileID: 814148305}
-  knightPrefab: {fileID: 435109754}
-  tankKnightPrefab: {fileID: 1268090820}
+  bossPrefab: {fileID: 1512763460702574, guid: 3bcc8282df1f2aa48b55331eb04521c7, type: 2}
+  knightPrefab: {fileID: 1128827759135354, guid: 587a4616b84a4a744a73d8dc6de8f6ec,
+    type: 2}
+  tankKnightPrefab: {fileID: 1082899121704622, guid: 59b1d977b41f99743a1bda86edf2619e,
+    type: 2}
   spawnPoint: {fileID: 427074138}
   waypoints:
   - {fileID: 1592400952}
@@ -20394,11 +20396,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 434073818}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &435109754 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1128827759135354, guid: 587a4616b84a4a744a73d8dc6de8f6ec,
-    type: 2}
-  m_PrefabInternal: {fileID: 1320005164}
 --- !u!1 &437303403
 GameObject:
   m_ObjectHideFlags: 0
@@ -23349,6 +23346,10 @@ Prefab:
     - target: {fileID: 4322805246144020, guid: 59b1d977b41f99743a1bda86edf2619e, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1082899121704622, guid: 59b1d977b41f99743a1bda86edf2619e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59b1d977b41f99743a1bda86edf2619e, type: 2}
@@ -26663,6 +26664,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 1512763460702574, guid: 3bcc8282df1f2aa48b55331eb04521c7, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bcc8282df1f2aa48b55331eb04521c7, type: 2}
   m_IsPrefabAsset: 0
@@ -29665,11 +29670,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 617342896}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &618582500 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1128827759135354, guid: 587a4616b84a4a744a73d8dc6de8f6ec,
-    type: 2}
-  m_PrefabInternal: {fileID: 278009777}
 --- !u!1 &622015958
 GameObject:
   m_ObjectHideFlags: 0
@@ -38650,11 +38650,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rayColor: {r: 1, g: 1, b: 1, a: 1}
   path_objs: []
---- !u!1 &814148305 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1512763460702574, guid: 3bcc8282df1f2aa48b55331eb04521c7,
-    type: 2}
-  m_PrefabInternal: {fileID: 2066485950}
 --- !u!1 &816601969
 GameObject:
   m_ObjectHideFlags: 0
@@ -39293,9 +39288,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d1b032644b2fd4c9d3aca985d92748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossPrefab: {fileID: 1262105601}
-  knightPrefab: {fileID: 618582500}
-  tankKnightPrefab: {fileID: 994239594}
+  bossPrefab: {fileID: 1512763460702574, guid: 3bcc8282df1f2aa48b55331eb04521c7, type: 2}
+  knightPrefab: {fileID: 1128827759135354, guid: 587a4616b84a4a744a73d8dc6de8f6ec,
+    type: 2}
+  tankKnightPrefab: {fileID: 1082899121704622, guid: 59b1d977b41f99743a1bda86edf2619e,
+    type: 2}
   spawnPoint: {fileID: 824588573}
   waypoints:
   - {fileID: 2042917814}
@@ -39748,6 +39745,10 @@ Prefab:
     - target: {fileID: 4146585925079262, guid: 3bcc8282df1f2aa48b55331eb04521c7, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512763460702574, guid: 3bcc8282df1f2aa48b55331eb04521c7, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bcc8282df1f2aa48b55331eb04521c7, type: 2}
@@ -42035,11 +42036,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 894491989}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &895179268 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1128827759135354, guid: 587a4616b84a4a744a73d8dc6de8f6ec,
-    type: 2}
-  m_PrefabInternal: {fileID: 35456420}
 --- !u!1 &897133148
 GameObject:
   m_ObjectHideFlags: 0
@@ -46259,11 +46255,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4677432953985854, guid: c7c5ddbcc27e6b548aa38e66c49591dd,
     type: 2}
   m_PrefabInternal: {fileID: 992183853}
---- !u!1 &994239594 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1082899121704622, guid: 59b1d977b41f99743a1bda86edf2619e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1744895553}
 --- !u!1 &996068328
 GameObject:
   m_ObjectHideFlags: 0
@@ -53197,9 +53188,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d1b032644b2fd4c9d3aca985d92748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossPrefab: {fileID: 1188241425}
-  knightPrefab: {fileID: 349210846}
-  tankKnightPrefab: {fileID: 1788803228}
+  bossPrefab: {fileID: 1512763460702574, guid: 3bcc8282df1f2aa48b55331eb04521c7, type: 2}
+  knightPrefab: {fileID: 1128827759135354, guid: 587a4616b84a4a744a73d8dc6de8f6ec,
+    type: 2}
+  tankKnightPrefab: {fileID: 1082899121704622, guid: 59b1d977b41f99743a1bda86edf2619e,
+    type: 2}
   spawnPoint: {fileID: 1133930299}
   waypoints:
   - {fileID: 1664562233}
@@ -57033,11 +57026,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1187595567}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1188241425 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1512763460702574, guid: 3bcc8282df1f2aa48b55331eb04521c7,
-    type: 2}
-  m_PrefabInternal: {fileID: 555729814}
 --- !u!1 &1189326701
 GameObject:
   m_ObjectHideFlags: 0
@@ -58338,6 +58326,10 @@ Prefab:
       propertyPath: pathToFollowList.Array.data[1]
       value: 
       objectReference: {fileID: 950105610}
+    - target: {fileID: 1082899121704622, guid: 59b1d977b41f99743a1bda86edf2619e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59b1d977b41f99743a1bda86edf2619e, type: 2}
   m_IsPrefabAsset: 0
@@ -60409,11 +60401,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1261802060}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1262105601 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1512763460702574, guid: 3bcc8282df1f2aa48b55331eb04521c7,
-    type: 2}
-  m_PrefabInternal: {fileID: 835672484}
 --- !u!1 &1262880582
 GameObject:
   m_ObjectHideFlags: 0
@@ -60669,11 +60656,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1266132750}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1268090820 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1082899121704622, guid: 59b1d977b41f99743a1bda86edf2619e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1218343349}
 --- !u!1 &1268782978
 GameObject:
   m_ObjectHideFlags: 0
@@ -63326,6 +63308,10 @@ Prefab:
       propertyPath: pathToFollowList.Array.data[1]
       value: 
       objectReference: {fileID: 950105610}
+    - target: {fileID: 1128827759135354, guid: 587a4616b84a4a744a73d8dc6de8f6ec, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 587a4616b84a4a744a73d8dc6de8f6ec, type: 2}
   m_IsPrefabAsset: 0
@@ -82781,6 +82767,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 1082899121704622, guid: 59b1d977b41f99743a1bda86edf2619e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59b1d977b41f99743a1bda86edf2619e, type: 2}
   m_IsPrefabAsset: 0
@@ -85035,11 +85025,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1786496869}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1788803228 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1082899121704622, guid: 59b1d977b41f99743a1bda86edf2619e,
-    type: 2}
-  m_PrefabInternal: {fileID: 2133550076}
 --- !u!1 &1793219261
 GameObject:
   m_ObjectHideFlags: 0
@@ -86661,6 +86646,10 @@ Prefab:
     - target: {fileID: 4146585925079262, guid: 3bcc8282df1f2aa48b55331eb04521c7, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512763460702574, guid: 3bcc8282df1f2aa48b55331eb04521c7, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bcc8282df1f2aa48b55331eb04521c7, type: 2}
@@ -90755,11 +90744,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4677432953985854, guid: c7c5ddbcc27e6b548aa38e66c49591dd,
     type: 2}
   m_PrefabInternal: {fileID: 1934352693}
---- !u!1 &1934461399 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1082899121704622, guid: 59b1d977b41f99743a1bda86edf2619e,
-    type: 2}
-  m_PrefabInternal: {fileID: 503836815}
 --- !u!1 &1934572020
 GameObject:
   m_ObjectHideFlags: 0
@@ -92491,6 +92475,10 @@ Prefab:
     - target: {fileID: 4140775842168488, guid: 587a4616b84a4a744a73d8dc6de8f6ec, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1128827759135354, guid: 587a4616b84a4a744a73d8dc6de8f6ec, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 587a4616b84a4a744a73d8dc6de8f6ec, type: 2}
@@ -97732,6 +97720,10 @@ Prefab:
       propertyPath: pathToFollowList.Array.data[1]
       value: 
       objectReference: {fileID: 950105610}
+    - target: {fileID: 1512763460702574, guid: 3bcc8282df1f2aa48b55331eb04521c7, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bcc8282df1f2aa48b55331eb04521c7, type: 2}
   m_IsPrefabAsset: 0
@@ -101057,6 +101049,10 @@ Prefab:
     - target: {fileID: 4322805246144020, guid: 59b1d977b41f99743a1bda86edf2619e, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1082899121704622, guid: 59b1d977b41f99743a1bda86edf2619e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59b1d977b41f99743a1bda86edf2619e, type: 2}
