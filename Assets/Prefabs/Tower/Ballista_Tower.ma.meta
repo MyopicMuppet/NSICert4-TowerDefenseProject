@@ -4,16 +4,22 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: left
-    100004: pCylinder1
+    100002: Cannon
+    100004: left
+    100006: Tower
     400000: //RootNode
-    400002: left
-    400004: pCylinder1
+    400002: Cannon
+    400004: left
+    400006: Tower
     2000000: left
     2100000: towerUV
-    2300000: pCylinder1
-    3300000: pCylinder1
-    4300000: pCylinder1
+    2100002: Cannon_UV
+    2300000: Cannon
+    2300002: Tower
+    3300000: Cannon
+    3300002: Tower
+    4300000: Tower
+    4300002: Cannon
   externalObjects: {}
   materials:
     importMaterials: 1
