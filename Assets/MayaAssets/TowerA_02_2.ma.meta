@@ -1,69 +1,24 @@
 fileFormatVersion: 2
-guid: 6cd5f2d3865e09d4b9414eaa1e17077b
+guid: 62836d788e2d09b4099a387cd31a758f
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Gem1
-    100002: Gem2
-    100004: Gem3
-    100006: Gem4
-    100008: Gem5
-    100010: Gem6
-    100012: Gem7
-    100014: Gem8
-    100016: Gem_core
-    100018: Gemz
-    100020: Tower1
-    100022: //RootNode
-    400000: Gem1
-    400002: Gem2
-    400004: Gem3
-    400006: Gem4
-    400008: Gem5
-    400010: Gem6
-    400012: Gem7
-    400014: Gem8
-    400016: Gem_core
-    400018: Gemz
-    400020: Tower1
-    400022: //RootNode
-    2100000: Tower
-    2100002: Crystal_1
-    2100004: Crystal_2
-    2100006: Crystal_5
-    2100008: Crystal_4
-    2100010: Crystal_3
-    2300000: Gem1
-    2300002: Gem2
-    2300004: Gem3
-    2300006: Gem4
-    2300008: Gem5
-    2300010: Gem6
-    2300012: Gem7
-    2300014: Gem8
-    2300016: Gem_core
-    2300018: Tower1
-    3300000: Gem1
-    3300002: Gem2
-    3300004: Gem3
-    3300006: Gem4
-    3300008: Gem5
-    3300010: Gem6
-    3300012: Gem7
-    3300014: Gem8
-    3300016: Gem_core
-    3300018: Tower1
-    4300000: Tower1
-    4300002: Gem_core
-    4300004: Gem1
-    4300006: Gem2
-    4300008: Gem3
-    4300010: Gem4
-    4300012: Gem5
-    4300014: Gem6
-    4300016: Gem7
-    4300018: Gem8
-    2186277476908879412: ImportLogs
+    100000: pCube1
+    100002: pCube2
+    100004: pCylinder3
+    100006: //RootNode
+    100008: transform1
+    100010: transform2
+    400000: pCube1
+    400002: pCube2
+    400004: pCylinder3
+    400006: //RootNode
+    400008: transform1
+    400010: transform2
+    2100000: lambert2
+    2300000: pCube2
+    3300000: pCube2
+    4300000: pCube2
   externalObjects: {}
   materials:
     importMaterials: 1
