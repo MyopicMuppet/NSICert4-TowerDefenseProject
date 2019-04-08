@@ -60,7 +60,7 @@ public class PauseMenu : MonoBehaviour
 
         gameOverMenuUI.SetActive(false);
         buttonsUI.SetActive(true);
-        *Time.timeScale = 1f;
+        Time.timeScale = 1f;
         GameIsPaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
