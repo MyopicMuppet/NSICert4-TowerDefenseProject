@@ -18,7 +18,17 @@ public class PauseMenu : MonoBehaviour
     {
         buttonsUI.SetActive(true);
         moneyPanelUI.SetActive(true);
+
         
+    }
+
+    public void Start()
+    {
+        gameOverMenuUI.SetActive(false);
+        buttonsUI.SetActive(true);
+        moneyPanelUI.SetActive(true);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
     }
 
     // Update is called once per frame
@@ -59,14 +69,13 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         gameOverMenuUI.SetActive(false);
         buttonsUI.SetActive(true);
         moneyPanelUI.SetActive(true);
         Time.timeScale = 1f;
         GameIsPaused = false;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
+        
     }
 
     public void Resume()
