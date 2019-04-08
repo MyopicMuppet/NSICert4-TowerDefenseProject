@@ -244,8 +244,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  attackRate: 1
-  attackRange: 2
+  attackRate: 2
+  attackRange: 4
   cost: 25
 --- !u!114 &114315081351418080
 MonoBehaviour:
@@ -280,7 +280,7 @@ LineRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f1e3fa5085aeac6489ea10ba0e4b01cf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -311,7 +311,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.067668915
         inSlope: 0
         outSlope: 0
         tangentMode: 0
