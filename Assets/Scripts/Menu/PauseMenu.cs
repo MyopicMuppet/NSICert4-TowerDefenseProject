@@ -11,8 +11,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject buttonsUI;
     public GameObject pauseMenuUI;
     public GameObject gameOverMenuUI;
-    public GameObject panelUI;
-    #endregion
+       #endregion
     #region Pause Menu
     public void Awake()
     {
@@ -51,8 +50,7 @@ public class PauseMenu : MonoBehaviour
         buttonsUI.SetActive(false);
         Time.timeScale = 0f;
         GameIsPaused = true;
-        panelUI.SetActive(false);
-
+        
     }
 
     public void Restart()
