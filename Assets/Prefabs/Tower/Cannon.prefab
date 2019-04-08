@@ -246,6 +246,7 @@ MonoBehaviour:
   damage: 10
   attackRate: 1
   attackRange: 2
+  cost: 25
 --- !u!114 &114315081351418080
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -260,6 +261,7 @@ MonoBehaviour:
   damage: 10
   attackRate: 1
   attackRange: 2
+  cost: 0
   orb: {fileID: 4116680960370308}
   lineDelay: 0.2
   line: {fileID: 120367948077086922}

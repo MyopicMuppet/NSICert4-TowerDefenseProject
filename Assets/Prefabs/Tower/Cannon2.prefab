@@ -816,6 +816,7 @@ MonoBehaviour:
   damage: 10
   attackRate: 1
   attackRange: 2
+  cost: 200
 --- !u!114 &114950276616003214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -830,6 +831,7 @@ MonoBehaviour:
   damage: 10
   attackRate: 1
   attackRange: 2
+  cost: 0
   orb: {fileID: 4222826188844160}
   lineDelay: 0.2
   line: {fileID: 120396574475795522}
@@ -848,7 +850,7 @@ LineRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 3b1c317710f6aba47aacbf4f383d3355, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -879,7 +881,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.06190008
         inSlope: 0
         outSlope: 0
         tangentMode: 0

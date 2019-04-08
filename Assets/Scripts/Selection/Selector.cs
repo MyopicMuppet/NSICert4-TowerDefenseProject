@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Selector : MonoBehaviour
 {
-
+    public static int money = 500;
+    public static Text moneyText;
     public GameObject[] towers;
     //Keep track of towers we spawn
     public GameObject[] holograms;
@@ -15,6 +17,12 @@ public class Selector : MonoBehaviour
 
     //Current prefab selected
     private int currentIndex;
+
+    private void Start()
+    {
+        moneyText = GameObject.Find("MoneyLabel").GetComponent<Text>();
+        UpdateMoney();
+    }
 
     void DrawRay(Ray ray)
     {
@@ -49,24 +57,33 @@ public class Selector : MonoBehaviour
             // if it is a placeable and its available (no tower spwawned)
             if (p && p.isAvailable)
             {
-                //Get position of placeable
-                Vector3 placeablePoint = p.transform.position;
-                //Get hologram of current tower
-                GameObject hologram = holograms[currentIndex];
-                hologram.SetActive(true);
-                //set position of hologram
-                hologram.transform.position = p.GetPivotPoint();
-
-                if (Input.GetMouseButtonDown(0))
+                //tower cost available
+                if (money >= towers[currentIndex].GetComponent<Tower>().cost)
                 {
-                    // Get the prefab
-                    GameObject towerPrefab = towers[currentIndex];
-                    //spawn the tower
-                    GameObject tower = Instantiate(towerPrefab);
-                    //position to placeable
-                    tower.transform.position = p.GetPivotPoint();
-                    // The tile is no longer available
-                    p.isAvailable = false;
+
+                   
+
+                    //Get position of placeable
+                    Vector3 placeablePoint = p.transform.position;
+                    //Get hologram of current tower
+                    GameObject hologram = holograms[currentIndex];
+                    hologram.SetActive(true);
+                    //set position of hologram
+                    hologram.transform.position = p.GetPivotPoint();
+
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        // Get the prefab
+                        GameObject towerPrefab = towers[currentIndex];
+                        //spawn the tower
+                        GameObject tower = Instantiate(towerPrefab);
+                        //position to placeable
+                        tower.transform.position = p.GetPivotPoint();
+                        // The tile is no longer available
+                        p.isAvailable = false;
+                        money = money - towers[currentIndex].GetComponent<Tower>().cost;
+                        UpdateMoney();
+                    }
                 }
             }
 
@@ -109,6 +126,17 @@ public class Selector : MonoBehaviour
         currentIndex = 2;
     }
     #endregion
+
+    public static void UpdateMoney()
+    {
+        moneyText.text = "$" + money;
+    }
+
+    public static void changeMoney(int amount)
+    {
+        money += amount;
+        UpdateMoney();
+    }
 }
 
 
