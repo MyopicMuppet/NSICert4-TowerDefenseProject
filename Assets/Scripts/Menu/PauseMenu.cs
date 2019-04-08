@@ -49,8 +49,8 @@ public class PauseMenu : MonoBehaviour
     {
         gameOverMenuUI.SetActive(true);
         buttonsUI.SetActive(false);
-        /*Time.timeScale = 0f;
-        GameIsPaused = true;*/
+        Time.timeScale = 0f;
+        GameIsPaused = true;
         panelUI.SetActive(false);
 
     }
@@ -60,8 +60,8 @@ public class PauseMenu : MonoBehaviour
 
         gameOverMenuUI.SetActive(false);
         buttonsUI.SetActive(true);
-        /*Time.timeScale = 1f;
-        GameIsPaused = false;*/
+        *Time.timeScale = 1f;
+        GameIsPaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
