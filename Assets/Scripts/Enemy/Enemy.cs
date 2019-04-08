@@ -29,6 +29,7 @@ public class Enemy : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
+            Selector.changeMoney(100);
 
             Destroy(gameObject);
         }

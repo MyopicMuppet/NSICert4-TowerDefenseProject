@@ -232,6 +232,7 @@ MonoBehaviour:
   damage: 10
   attackRate: 1
   attackRange: 2
+  cost: 0
   orb: {fileID: 4272280941336402}
   lineDelay: 0.2
   line: {fileID: 120159420165225066}
@@ -249,6 +250,7 @@ MonoBehaviour:
   damage: 35
   attackRate: 1
   attackRange: 2
+  cost: 100
 --- !u!120 &120159420165225066
 LineRenderer:
   m_ObjectHideFlags: 1

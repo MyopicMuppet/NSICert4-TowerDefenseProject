@@ -7,6 +7,7 @@ public class Tower : MonoBehaviour
     public int damage = 10;
     public float attackRate = 1f;
     public float attackRange = 2f;
+    public int cost = 0;
 
     protected Enemy currentEnemy;
     private float attackTimer = 0f;
