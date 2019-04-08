@@ -47,47 +47,52 @@ public class Selector : MonoBehaviour
         //Disable all Holgrams at the start of the frame
         DisableAllHolograms();
 
-        Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        //Perform Raycast
-        if (Physics.Raycast(mouseRay, out hit))
+
+        if (Time.timeScale == 1)
         {
-            //Try getting a placeable script
-            Placeable p = hit.transform.GetComponent<Placeable>();
-            // if it is a placeable and its available (no tower spwawned)
-            if (p && p.isAvailable)
+
+
+            Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            //Perform Raycast
+            if (Physics.Raycast(mouseRay, out hit))
             {
-                //tower cost available
-                if (money >= towers[currentIndex].GetComponent<Tower>().cost)
+                //Try getting a placeable script
+                Placeable p = hit.transform.GetComponent<Placeable>();
+                // if it is a placeable and its available (no tower spwawned)
+                if (p && p.isAvailable)
                 {
-
-                   
-
-                    //Get position of placeable
-                    Vector3 placeablePoint = p.transform.position;
-                    //Get hologram of current tower
-                    GameObject hologram = holograms[currentIndex];
-                    hologram.SetActive(true);
-                    //set position of hologram
-                    hologram.transform.position = p.GetPivotPoint();
-
-                    if (Input.GetMouseButtonDown(0))
+                    //tower cost available
+                    if (money >= towers[currentIndex].GetComponent<Tower>().cost)
                     {
-                        // Get the prefab
-                        GameObject towerPrefab = towers[currentIndex];
-                        //spawn the tower
-                        GameObject tower = Instantiate(towerPrefab);
-                        //position to placeable
-                        tower.transform.position = p.GetPivotPoint();
-                        // The tile is no longer available
-                        p.isAvailable = false;
-                        money = money - towers[currentIndex].GetComponent<Tower>().cost;
-                        UpdateMoney();
+
+
+
+                        //Get position of placeable
+                        Vector3 placeablePoint = p.transform.position;
+                        //Get hologram of current tower
+                        GameObject hologram = holograms[currentIndex];
+                        hologram.SetActive(true);
+                        //set position of hologram
+                        hologram.transform.position = p.GetPivotPoint();
+
+                        if (Input.GetMouseButtonDown(0))
+                        {
+                            // Get the prefab
+                            GameObject towerPrefab = towers[currentIndex];
+                            //spawn the tower
+                            GameObject tower = Instantiate(towerPrefab);
+                            //position to placeable
+                            tower.transform.position = p.GetPivotPoint();
+                            // The tile is no longer available
+                            p.isAvailable = false;
+                            money = money - towers[currentIndex].GetComponent<Tower>().cost;
+                            UpdateMoney();
+                        }
                     }
                 }
+
             }
-
-
         }
     }
     /// <summary>

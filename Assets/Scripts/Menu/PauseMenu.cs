@@ -11,11 +11,13 @@ public class PauseMenu : MonoBehaviour
     public GameObject buttonsUI;
     public GameObject pauseMenuUI;
     public GameObject gameOverMenuUI;
+    public GameObject moneyPanelUI;
        #endregion
     #region Pause Menu
     public void Awake()
     {
         buttonsUI.SetActive(true);
+        moneyPanelUI.SetActive(true);
         
     }
 
@@ -48,6 +50,8 @@ public class PauseMenu : MonoBehaviour
     {
         gameOverMenuUI.SetActive(true);
         buttonsUI.SetActive(false);
+        moneyPanelUI.SetActive(false);
+
         Time.timeScale = 0f;
         GameIsPaused = true;
         
@@ -58,6 +62,7 @@ public class PauseMenu : MonoBehaviour
 
         gameOverMenuUI.SetActive(false);
         buttonsUI.SetActive(true);
+        moneyPanelUI.SetActive(true);
         Time.timeScale = 1f;
         GameIsPaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -69,6 +74,7 @@ public class PauseMenu : MonoBehaviour
         //disable the pause menu
         pauseMenuUI.SetActive(false);
         buttonsUI.SetActive(true);
+        moneyPanelUI.SetActive(true);
         //Resume time
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -79,6 +85,7 @@ public class PauseMenu : MonoBehaviour
         //Activate the pause menu
         pauseMenuUI.SetActive(true);
         buttonsUI.SetActive(false);
+        moneyPanelUI.SetActive(false);
         //freeze time
         Time.timeScale = 0f;
         GameIsPaused = true;

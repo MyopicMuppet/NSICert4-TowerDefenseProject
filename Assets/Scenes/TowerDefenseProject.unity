@@ -26978,7 +26978,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -83, y: 180}
+  m_AnchoredPosition: {x: -42, y: 180}
   m_SizeDelta: {x: 129.7, y: 145.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &578561399
@@ -29333,7 +29333,7 @@ RectTransform:
   - {fileID: 1462855518}
   - {fileID: 1836003406}
   m_Father: {fileID: 912142070}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -42851,9 +42851,9 @@ RectTransform:
   m_Children:
   - {fileID: 636980744}
   - {fileID: 1056628141}
-  - {fileID: 1278258558}
   - {fileID: 622015959}
   - {fileID: 1357440302}
+  - {fileID: 1278258558}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -42876,6 +42876,7 @@ MonoBehaviour:
   buttonsUI: {fileID: 622015958}
   pauseMenuUI: {fileID: 1056628140}
   gameOverMenuUI: {fileID: 1357440301}
+  moneyPanelUI: {fileID: 1278258557}
 --- !u!1 &912656528
 GameObject:
   m_ObjectHideFlags: 0
@@ -47888,7 +47889,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -83, y: -187}
+  m_AnchoredPosition: {x: -44, y: -187}
   m_SizeDelta: {x: 129.7, y: 145.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1028317779
@@ -60814,7 +60815,7 @@ GameObject:
   - component: {fileID: 1278258560}
   - component: {fileID: 1278258559}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: MoneyCounter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60832,7 +60833,7 @@ RectTransform:
   m_Children:
   - {fileID: 814422357}
   m_Father: {fileID: 912142070}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -64996,7 +64997,7 @@ RectTransform:
   - {fileID: 1824205177}
   - {fileID: 1359822610}
   m_Father: {fileID: 912142070}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -75467,7 +75468,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -83, y: -5}
+  m_AnchoredPosition: {x: -44, y: -5}
   m_SizeDelta: {x: 129.7, y: 145.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1554026246
