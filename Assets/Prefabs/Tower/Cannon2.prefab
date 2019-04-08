@@ -815,7 +815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 50
   attackRate: 1
-  attackRange: 2
+  attackRange: 4
   cost: 200
 --- !u!114 &114950276616003214
 MonoBehaviour:
