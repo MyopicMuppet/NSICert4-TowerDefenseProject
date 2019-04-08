@@ -17,7 +17,7 @@ public class PauseMenu : MonoBehaviour
     public void Awake()
     {
         buttonsUI.SetActive(true);
-        panelUI.SetActive(true);
+        
     }
 
     // Update is called once per frame
