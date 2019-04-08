@@ -11,12 +11,13 @@ public class PauseMenu : MonoBehaviour
     public GameObject buttonsUI;
     public GameObject pauseMenuUI;
     public GameObject gameOverMenuUI;
-    public GameObject PanelUI;
+    public GameObject panelUI;
     #endregion
     #region Pause Menu
     public void Awake()
     {
         buttonsUI.SetActive(true);
+        panelUI.SetActive(true);
     }
 
     // Update is called once per frame
@@ -50,7 +51,7 @@ public class PauseMenu : MonoBehaviour
         buttonsUI.SetActive(false);
         /*Time.timeScale = 0f;
         GameIsPaused = true;*/
-        PanelUI.SetActive(false);
+        panelUI.SetActive(false);
 
     }
 
