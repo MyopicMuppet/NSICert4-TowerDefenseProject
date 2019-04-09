@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-public class MoveonPathScript : MonoBehaviour
+
+// CTRL + R + R
+public class NavEnemy : Enemy
 {
     #region Variables
     //waypoint variables
@@ -17,9 +19,6 @@ public class MoveonPathScript : MonoBehaviour
 
     //Enemy attack and damage variables
     [Header("Attack & Damage")]
-    public int damage = 10;
-    public float attackRate = 5f;
-    public float attackRange = 5f;
     public GateHealth currentGate;
     public CastleHealth currentCastle;
 
@@ -28,7 +27,6 @@ public class MoveonPathScript : MonoBehaviour
     private Vector3 current_position;
     private float reachDistance = 1.0f;
     private float attackTimer = 0f;
-    private Transform myTransform;
     #endregion
 
     // Note (Manny): You don't need a region for every function, i.e, 'Start' doesn't need a '#region Start'
@@ -39,12 +37,7 @@ public class MoveonPathScript : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
-
-    private void Awake()
-    {
-        myTransform = transform;
-    }
-
+    
     // Use this for initialization
     void Start()
     {
@@ -119,16 +112,15 @@ public class MoveonPathScript : MonoBehaviour
 
     #region External
     // Aims at a given enemy every frame
-    public virtual void Aim(GateHealth g)
+    public override void Aim(GateHealth g)
     {
-        print("I am aiming at '" + g.name + "'");
+        print("MoveOnPath is aiming at '" + g.name + "'");
     }
     // Attacks at a given enemy only when 'attacking'
-    public virtual void Attack(GateHealth g)
+    public override void Attack(GateHealth g)
     {
-        print("I am attacking '" + g.name + "'");
+        print("MoveOnPath is attacking '" + g.name + "'");
         g.TakeDamage(damage);
-
         // Note (Manny): The way you're using Inheritance & Polymorphism here is wrong. Come and see me for more details.
     }
 

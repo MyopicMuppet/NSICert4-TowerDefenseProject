@@ -4,23 +4,19 @@ using UnityEngine;
 
 using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshAgent))]
 public class Enemy : MonoBehaviour
 {
     public int maxHealth = 100;
-    //public Transform target;
+    public int damage = 10;
+    public float attackRate = 5f;
+    public float attackRange = 5f;
 
-    //private NavMeshAgent agent;
     private int health = 0;
 
     void Start()
     {
         // Set health to whatever maxHealth is at start
         health = maxHealth;
-        // Get NavMeshAgent component
-        //agent = GetComponent<NavMeshAgent>();
-        // Follow destination
-        //agent.SetDestination(target.position);
     }
 
     // Call this function to make Enemy take damage
@@ -33,5 +29,15 @@ public class Enemy : MonoBehaviour
 
             Destroy(gameObject);
         }
+    }
+    // Aims at a given enemy every frame
+    public virtual void Aim(GateHealth g)
+    {
+        print("Base Enemy is aiming at '" + g.name + "'");
+    }
+    // Attacks at a given enemy only when 'attacking'
+    public virtual void Attack(GateHealth g)
+    {
+        print("Base Enemy is attacking '" + g.name + "'");
     }
 }
